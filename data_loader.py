@@ -2,7 +2,7 @@ import pandas as pd
 
 def load_data():
 
-    file_path = "data/hotel_bookings.csv.csv"
+    file_path = "hotel_bookings.csv"
 
     df = pd.read_csv(file_path)
 
