@@ -191,7 +191,8 @@ print(results_df)
 
 
 # ============================================
-# 7. Save Best Model (LightGBM)
+# # ============================================
+# 7. Save Both Models
 # ============================================
 
 os.makedirs(
@@ -200,15 +201,21 @@ os.makedirs(
 )
 
 
-best_model = models["LightGBM"]
-
-
+# Save LightGBM
 joblib.dump(
-    best_model,
+    models["LightGBM"],
     "models/lightgbm_hotel_model.pkl"
 )
 
 
+# Save Random Forest
+joblib.dump(
+    models["Random Forest"],
+    "models/random_forest_hotel_model.pkl"
+)
+
+
+# Save feature names
 joblib.dump(
     list(X.columns),
     "models/features.pkl"
@@ -216,6 +223,10 @@ joblib.dump(
 
 
 print("\n================================")
-print("MODEL TRAINING COMPLETED")
-print("LightGBM model saved successfully")
+print("BOTH MODELS SAVED SUCCESSFULLY")
 print("================================")
+# Save test data
+os.makedirs("processed_data", exist_ok=True)
+
+X_test.to_csv("processed_data/X_test.csv", index=False)
+y_test.to_csv("processed_data/y_test.csv", index=False)
