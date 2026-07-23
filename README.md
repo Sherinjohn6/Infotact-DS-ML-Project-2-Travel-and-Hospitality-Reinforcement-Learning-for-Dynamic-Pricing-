@@ -185,7 +185,7 @@ Evaluation metrics:
 
 **Sherin John**
 
-Data Science & AI Enthusiast
+Data Science 
 
 ---
 
