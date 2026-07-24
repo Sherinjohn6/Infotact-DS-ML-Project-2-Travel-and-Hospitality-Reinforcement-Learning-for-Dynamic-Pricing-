@@ -1,0 +1,30 @@
+# Dataset files
+hotel_bookings.csv
+processed_data/*.csv
+
+# Machine learning models
+models/*.pkl
+processed_data/*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env
+# Dataset files
+hotel_bookings.csv
+processed_data/*.csv
+
+# Machine learning models
+models/*.pkl
+processed_data/*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env
